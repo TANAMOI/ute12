@@ -5,9 +5,9 @@ import java.util.*;
 public class MainList {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		Scanner sc = new Scanner(System.in);
+		
+		
+		 Scanner sc = new Scanner(System.in);
 		
 		int opcion;
 		do {
@@ -33,11 +33,12 @@ public class MainList {
 			break;
 			
 			case 3:
-				Lista.insertar(p);
+				insertaPersona();
 			break;	
 			
 			case 4:
-				Lista.eliminar(p);
+				
+				eliminaPersona();
 			break;
 			
 			case 5:
@@ -50,14 +51,86 @@ public class MainList {
 		
 		}
 		
-		}
+	
+}
 		while (opcion!=0);
+	}
 		
+public static void insertaPersona() {
+
+	Scanner sc = new Scanner(System.in);
+			System.out.println("Nombre :");
+			String nombre = sc.next();
+
+			System.out.println("Apellidos :");
+			String apellidos = sc.next();
+
+			System.out.println("DNI:");
+			String dni = sc.next();
+			
+			System.out.println("Edad:");
+			int edad = sc.nextInt();
+
+			System.out.println("Calle :");
+			String calle = sc.next();
+			
+			System.out.println("Numero :");
+			int numero = sc.nextInt();
+
+			System.out.println("Código Postal");
+			int cp = sc.nextInt();
+
+			System.out.println("Provincia :");
+			String provincia=sc.next();
+			Lista.insertar(new Persona(nombre,apellidos,dni,edad,calle,numero,cp,provincia));
+
+
+			
+		}
 		
+/*public static void eliminaPersona() {
+
+	Scanner sc = new Scanner(System.in);
+			System.out.println("Nombre :");
+			String nombre = sc.next();
+
+			System.out.println("Apellidos :");
+			String apellidos = sc.next();
+
+			System.out.println("DNI:");
+			String dni = sc.next();
+			
+			System.out.println("Edad:");
+			int edad = sc.nextInt();
+			
+
+			System.out.println("Calle :");
+			String calle = sc.next();
+			
+			System.out.println("Numero :");
+			int numero = sc.nextInt();
+
+			System.out.println("Código Postal");
+			int cp = sc.nextInt();
+
+			System.out.println("Provincia :");
+			String pronvincia = sc.next();
+
+			Lista.eliminar(new Persona());
+
+
+			
+		}*/
+
 		
 		//me falta algo para insertar las personas y eliminarlas
 		
-	
+public static void eliminaPersona() {
 
+	Scanner sc = new Scanner(System.in);
+			System.out.println("Linea del nombre a eliminar");
+			int pos = sc.nextInt();
+	
+			Lista.eliminar(pos);
 }
 }

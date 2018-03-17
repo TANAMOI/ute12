@@ -77,23 +77,10 @@ public class Persona {
 
 	public String toString() {
 		
-		return nombre+apellidos+dni+edad+d;
+		return nombre+apellidos+dni+edad+" "+d.getCalle()+" "+d.getNumero()+"       "+d.getCp()+d.getProvincia();
 		
 	}
 
-	/**
-	 * @return the d
-	 */
-	public Direccion getD() {
-		return d;
-	}
-
-	/**
-	 * @param d the d to set
-	 */
-	public void setD(Direccion d) {
-		this.d = d;
-	}
-
+	
 }
 // }
