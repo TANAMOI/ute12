@@ -16,7 +16,7 @@ public class Lista  {
 	
 	public static void cargar() {
 	personas.add(new Persona("Adrian ","Garcia Santos ","1111111A ",23 ,"    C/Los Olivos ",3 ,  38493 ,"   SC Tfe "));
-	personas.add(new Persona("Ana ","Mendez Nuñez ","2222222B ",22 ,"    C/Los Pinos ",25 ,  38403 ,"   SC Tfe "));
+	personas.add(new Persona("Ana ","Mendez NuÃ±ez ","2222222B ",22 ,"    C/Los Pinos ",25 ,  38403 ,"   SC Tfe "));
 	personas.add(new Persona("Maria ","Sanchez Camacho ","3333333C ",45 ,"    C/Los Franceses ",23 ,  38505 ,"   Las Palmas "));
 	personas.add( new Persona("Julio ","Brito Gonzalez ","4444444D ",30 ,"    C/Los Pinos ",25 ,  38403 ,"   SC Tfe "));
 	
@@ -59,24 +59,27 @@ public class Lista  {
 	
 	public static void buscadni(String dni) {
 	   
-	   for (Persona busca : personas) {
+	   ArrayList<String> search = new ArrayList<String>();
+	  
+		
+		for (Persona busca : personas) {
 	    	
-	    		    	
-	        if ((busca.getDni().contains(dni))) {
+	    	search.add(busca.getDni());
+	    	
+		}
+	        if ((search.contains(dni))) {
 	        	
 	        	
-	        	System.out.println(busca.toString());
-	    }else {
+	        	System.out.println(personas.get(search.indexOf(dni)));
+	        }
+	        else {
 	    	System.out.println("el dni no existe");
-	    	
-	    }
+	    	}
 	    
 	   } 
 
 	
 		
-		}
-	
 		public static void ordenar() {
 		 
 		 Collections.sort(personas);
