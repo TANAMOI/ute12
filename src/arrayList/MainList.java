@@ -2,12 +2,15 @@ package arrayList;
 
 import java.util.*;
 
-public class MainList {
+import interfaces_1.Personas;
 
+public class MainList {
+	
+	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
 		
 		
-		 Scanner sc = new Scanner(System.in);
+		
 		
 		int opcion;
 		do {
@@ -19,6 +22,9 @@ public class MainList {
 			System.out.println("3. opcion insertar un dato al final de la lista");
 			System.out.println("4. opcion elimine un dato indicando su posicion");
 			System.out.println("5. opcion indica el numero de datos");
+			System.out.println("6. opcion busque por DNI ");
+			System.out.println("7. opcion ordene la lista");
+			System.out.println("8. opcion ordena por nombre");
 			System.out.println("0. Salir");
 			
 			opcion=sc.nextInt();
@@ -45,6 +51,22 @@ public class MainList {
 				Lista.contar();
 			break;
 			
+			case 6:
+				System.out.println("Indique el DNI que busca: ");
+				Lista.buscadni(sc.next());
+				
+			break;	
+			
+			case 7:
+				
+				Lista.ordenar();
+			break;
+			
+			case 8:
+				
+				//Lista.comparar(sc.next());
+			break;	
+			
 			default:
 				System.out.println("bye");
 			break;
@@ -58,7 +80,7 @@ public class MainList {
 		
 public static void insertaPersona() {
 
-	Scanner sc = new Scanner(System.in);
+	
 			System.out.println("Nombre :");
 			String nombre = sc.next();
 
@@ -123,11 +145,11 @@ public static void insertaPersona() {
 		}*/
 
 		
-		//me falta algo para insertar las personas y eliminarlas
+	
 		
 public static void eliminaPersona() {
 
-	Scanner sc = new Scanner(System.in);
+	
 			System.out.println("Linea del nombre a eliminar");
 			int pos = sc.nextInt();
 	

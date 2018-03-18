@@ -1,6 +1,8 @@
 package arrayList;
 
-public class Persona {
+import java.util.Collections;
+
+public class Persona implements Comparable<Persona> {
 
 	private String nombre;
 
@@ -79,6 +81,14 @@ public class Persona {
 		
 		return nombre+apellidos+dni+edad+" "+d.getCalle()+" "+d.getNumero()+"       "+d.getCp()+d.getProvincia();
 		
+	}
+	public  int compareTo (Persona personas) {
+		 
+		 	 
+		 return (nombre).compareTo(personas.getNombre());
+	}
+	public  boolean equals(Persona personas) {
+		return (this.nombre).equals(personas.getNombre());
 	}
 
 	

@@ -1,12 +1,13 @@
 package arrayList;
 
-import java.util.*;
-import org.omg.CosNaming.NamingContextExtPackage.AddressHelper;
+import java.util.ArrayList;
+import java.util.Collections;
 
 
-public class Lista{
+public class Lista  {
 	
-	public static ArrayList<Persona> personas=new ArrayList<Persona>();;
+	public static ArrayList<Persona> personas=new ArrayList<Persona>();
+	
 	
 	public Lista() {
 		
@@ -30,8 +31,7 @@ public class Lista{
 		
 		for (Persona a: personas) {
 			System.out.println("Nombre  "+ "Apellidos    "+  "  DNI    "+ "Edad "+"Calle       "+"   Numero "+"    "
-					+ "CP   "+
-		"Provincia");
+					+ "CP   "+"Provincia");
 			System.out.println(a);
 			
 		}
@@ -55,4 +55,44 @@ public class Lista{
 	public static void contar() {
 		System.out.println("Existen "+personas.size() + " persnas");
 	}
+	
+	
+	public static void buscadni(String dni) {
+	   
+	   for (Persona busca : personas) {
+	    	
+	    		    	
+	        if ((busca.getDni().contains(dni))) {
+	        	
+	        	
+	        	System.out.println(busca.toString());
+	    }else {
+	    	System.out.println("el dni no existe");
+	    	
+	    }
+	    
+	   } 
+
+	
+		
+		}
+	
+		public static void ordenar() {
+		 
+		 Collections.sort(personas);
+		 for (Persona ord: personas) {
+			 System.out.println(ord);
+		 }
+		 
+	 }
+	public int compareTo (Persona personas ) {
+		
+		 return (personas.compareTo(personas));		 
+	}
+	//public static void comparar (String nom) {
+	//	System.out.println(personas.compareTo(nom));
+	///}
 }
+	
+
+
