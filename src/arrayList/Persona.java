@@ -85,11 +85,9 @@ public class Persona implements Comparable<Persona> {
 	public  int compareTo (Persona personas) {
 		 
 		 	 
-		 return (nombre).compareTo(personas.getNombre());
+		 return (apellidos).compareTo(personas.getApellidos());
 	}
-	public  boolean equals(Persona personas) {
-		return (this.nombre).equals(personas.getNombre());
-	}
+	
 
 	
 }

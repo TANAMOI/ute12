@@ -2,20 +2,24 @@ package arrayList;
 
 import java.util.*;
 
-import interfaces_1.Personas;
+
 
 public class MainList {
+	
+	ArrayList<Lista> lis =new ArrayList<Lista>();
 	
 	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
 		
 		
 		
+		 Lista list = new Lista ();
+	
 		
 		int opcion;
 		do {
 			
-						
+				
 			System.out.println("Elige la opcion que desee:");
 			System.out.println("1. opcion cargar datos");
 			System.out.println("2. opcion listar datos");
@@ -27,15 +31,17 @@ public class MainList {
 			System.out.println("8. opcion ordena por nombre");
 			System.out.println("0. Salir");
 			
+			
 			opcion=sc.nextInt();
 			switch (opcion){
+			 
 			
 			case 1:
-				Lista.cargar();
+				list.cargar();
 			break;
 			
 			case 2:
-				Lista.listar();
+				list.listar();
 			break;
 			
 			case 3:
@@ -48,25 +54,21 @@ public class MainList {
 			break;
 			
 			case 5:
-				Lista.contar();
+				list.contar();
 			break;
 			
 			case 6:
 				System.out.println("Indique el DNI que busca: ");
-				Lista.buscadni(sc.next());
+				list.buscadni(sc.next());
 				
 			break;	
 			
 			case 7:
 				
-				Lista.ordenar();
+				list.ordenar();
 			break;
 			
-			case 8:
-				
-				//Lista.comparar(sc.next());
-			break;	
-			
+						
 			default:
 				System.out.println("bye");
 			break;
